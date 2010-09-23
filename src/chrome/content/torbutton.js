@@ -272,7 +272,9 @@ var torbutton_unique_pref_observer =
                     var wm = Cc["@mozilla.org/appshell/window-mediator;1"]
                                .getService(Components.interfaces.nsIWindowMediator);
                     var chrome = wm.getMostRecentWindow("navigator:browser");
-                    chrome.alert(warning);
+                    if (m_tb_prefs.getBoolPref("extensions.torbutton.display_toggle_warning")) {
+											chrome.alert(warning);
+										}
                 }
                 break;
 
@@ -283,7 +285,9 @@ var torbutton_unique_pref_observer =
                     var o_stringbundle = torbutton_get_stringbundle();
                     var warning = o_stringbundle.GetStringFromName("torbutton.popup.toggle.warning");
                     this.did_toggle_warning = true;
-                    chrome.alert(warning);
+                    if (m_tb_prefs.getBoolPref("extensions.torbutton.display_toggle_warning")) {
+											chrome.alert(warning);
+										}
                 }
                 break;
 

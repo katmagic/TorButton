@@ -161,6 +161,7 @@ pref("extensions.torbutton.fakerefresh", false);
 pref("extensions.torbutton.customeref","");
 pref("extensions.torbutton.disable_livemarks",true);
 pref("extensions.torbutton.update_torbutton_via_tor",true);
+pref("extensions.torbutton.display_toggle_warning",true);
 
 // Google Captcha prefs
 // FIXME: NID cookie?
