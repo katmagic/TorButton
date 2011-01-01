@@ -3234,6 +3234,9 @@ function torbutton_do_fresh_install()
             }
         }
 
+        torbutton_toggle(true);
+        torbutton_toggle(true);
+
         m_tb_prefs.setBoolPref("extensions.torbutton.fresh_install", false);
 
         torbutton_log(4, "First time startup completed");
